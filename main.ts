@@ -26,6 +26,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
     otherSprite.destroy()
 })
 sprites.onOverlap(SpriteKind.Hoop, SpriteKind.Projectile, function (sprite, otherSprite) {
+    music.baDing.stop()
     info.changeScoreBy(3)
     otherSprite.destroy()
     if (info.score() == 150) {
